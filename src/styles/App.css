@@ -1,0 +1,74 @@
+:root {
+  /* Brand Colors */
+  --primary-yellow: #F4CE14;
+  --primary-green: #495E57;
+  
+  /* Text Colors */
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --section-padding: 2rem;
+  --border-radius: 16px;
+  
+  /* Typography */
+  --font-heading: 'Markazi Text', serif;
+  --font-body: 'Karla', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 500;
+  color: var(--primary-yellow);
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding);
+}
+
+/* Buttons */
+.button {
+  background-color: var(--primary-yellow);
+  color: var(--text-dark);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
