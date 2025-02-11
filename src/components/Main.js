@@ -1,13 +1,27 @@
-import '../styles/Main.css';
+// src/components/Main.js
+import { useReducer } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import BookingPage from '../pages/BookingPage';
+import { initializeTimes, updateTimes } from '../reducers/bookingReducer';
 
 function Main() {
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+
   return (
-    <main className="main">
-      <div className="container">
-        <div className="grid-container">
-          {/* İçerik buraya gelecek */}
-        </div>
-      </div>
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route 
+          path="/booking" 
+          element={
+            <BookingPage 
+              availableTimes={availableTimes}
+              dispatch={dispatch}
+            />
+          } 
+        />
+      </Routes>
     </main>
   );
 }

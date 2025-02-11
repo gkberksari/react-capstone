@@ -1,10 +1,19 @@
-function BookingPage() {
-    return (
-      <div className="container booking-page">
+// src/pages/BookingPage.js
+import BookingForm from '../components/BookingForm';
+
+function BookingPage({ availableTimes, dispatch }) {
+  return (
+    <div className="booking-page">
+      <div className="container">
         <h1>Reserve a Table</h1>
-        {/* Rezervasyon formu buraya gelecek */}
+        <p>Please fill in the form below to make your reservation.</p>
+        <BookingForm 
+          availableTimes={availableTimes}
+          dispatch={dispatch}
+        />
       </div>
-    );
-  }
-  
-  export default BookingPage;
+    </div>
+  );
+}
+
+export default BookingPage;
