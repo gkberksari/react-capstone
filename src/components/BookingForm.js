@@ -1,6 +1,7 @@
 // src/components/BookingForm.js
 import { useState, useEffect } from 'react';
 import '../styles/BookingForm.css';
+import React from 'react';
 
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [formData, setFormData] = useState({

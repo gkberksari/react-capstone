@@ -1,5 +1,5 @@
 import '../styles/CustomersSay.css';
-
+import React from 'react';
 function CustomersSay() {
   const testimonials = [
     {

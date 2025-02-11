@@ -1,5 +1,5 @@
 import '../styles/Chicago.css';
-
+import React from 'react';
 function Chicago() {
   return (
     <section className="chicago">

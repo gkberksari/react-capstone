@@ -1,6 +1,6 @@
 // src/pages/BookingPage.js
 import BookingForm from '../components/BookingForm';
-
+import React from 'react';
 function BookingPage({ availableTimes, dispatch }) {
   return (
     <div className="booking-page">

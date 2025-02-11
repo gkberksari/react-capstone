@@ -1,5 +1,6 @@
 import '../styles/Hero.css';
 import heroImage from '../icons_assets/lemon dessert.jpg';
+import React from 'react';
 function Hero() {
   return (
     <section className="hero">

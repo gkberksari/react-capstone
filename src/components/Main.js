@@ -6,7 +6,7 @@ import BookingPage from '../pages/BookingPage';
 import ConfirmedBooking from '../components/ConfirmedBooking';
 import { initializeTimes, updateTimes } from '../reducers/bookingReducer';
 import { submitAPI } from '../utils/api';
-
+import React from 'react';
 function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
   const navigate = useNavigate();

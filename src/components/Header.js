@@ -1,5 +1,6 @@
 import '../styles/Header.css';
 import logo from '../icons_assets/Logo .svg';
+import React from 'react';
 function Header() {
   return (
     <header className="header">

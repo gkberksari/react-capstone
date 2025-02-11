@@ -1,5 +1,6 @@
 import '../styles/Footer.css';
 import logo from '../icons_assets/Logo .svg';
+import React from 'react';
 function Footer() {
   return (
     <footer className="footer">

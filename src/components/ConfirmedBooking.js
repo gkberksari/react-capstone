@@ -1,7 +1,7 @@
 // src/components/ConfirmedBooking.js
 import { useLocation, Link } from 'react-router-dom';
 import '../styles/ConfirmedBooking.css';
-
+import React from 'react';
 function ConfirmedBooking() {
   const location = useLocation();
   const booking = location.state?.booking;

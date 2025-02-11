@@ -1,5 +1,6 @@
 import '../styles/Specials.css';
 import greekSalad from '../icons_assets/greek salad.jpg';
+import React from 'react';
 function Specials() {
   return (
     <section className="specials">
