@@ -1,21 +1,25 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import Main from './components/Main';
 import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Specials from './components/Specials';
+import HomePage from './pages/HomePage';
+import BookingPage from './pages/BookingPage';
+import './styles/App.css';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
       <Nav />
       <main>
-        <Hero />
-        <Specials />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/booking" element={<BookingPage />} />
+          {/* Diğer rotalar */}
+        </Routes>
       </main>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
