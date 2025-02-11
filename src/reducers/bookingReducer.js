@@ -1,21 +1,19 @@
 // src/reducers/bookingReducer.js
+import { fetchAPI } from '../utils/api';
+
 export const initializeTimes = () => {
-    return [
-      "17:00",
-      "18:00",
-      "19:00",
-      "20:00",
-      "21:00",
-      "22:00"
-    ];
-  };
-  
-  export const updateTimes = (state, action) => {
-    switch (action.type) {
-      case 'UPDATE_TIMES':
-        // Şimdilik aynı saatleri döndürüyoruz, gerçek API'de tarihe göre müsait saatler dönecek
-        return state;
-      default:
-        return state;
-    }
-  };
+  // Bugünün tarihini al ve API'den müsait saatleri getir
+  const today = new Date();
+  return fetchAPI(today);
+};
+
+export const updateTimes = (state, action) => {
+  switch (action.type) {
+    case 'UPDATE_TIMES':
+      // Seçilen tarihe göre API'den müsait saatleri getir
+      const date = new Date(action.payload);
+      return fetchAPI(date);
+    default:
+      return state;
+  }
+};

@@ -1,0 +1,70 @@
+/* src/styles/ConfirmedBooking.css */
+.confirmed-booking {
+    padding: 4rem 0;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+  }
+  
+  .confirmation-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .check-mark {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 2rem;
+  }
+  
+  .booking-details {
+    margin: 2rem 0;
+    text-align: left;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .thank-you {
+    margin: 2rem 0;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .button.secondary {
+    background: var(--primary-green);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .confirmation-card {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+  }
